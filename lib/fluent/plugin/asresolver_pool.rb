@@ -21,7 +21,7 @@ module Fluent
         begin
           record = resolver.resolve(record)
         rescue
-          @log.error 'Unexpected error', record: record, error_class: $!.class, error: $!.message
+          @log.error 'Unexpected error', record: record, error_class: $!.class, error: $!.message, backtrace: $!.backtrace
         ensure
           @pool << resolver
         end
