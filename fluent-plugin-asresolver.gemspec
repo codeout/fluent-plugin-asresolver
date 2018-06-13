@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.summary       = "Fluentd filter plugin to resolve origin AS of src / dst IP addresses."
   spec.description   = "Fluentd filter plugin to resolve origin AS of src / dst IP addresses with gobgpd lookup."
   spec.homepage      = "https://github.com/codeout/fluent-plugin-asresolver"
-  spec.license       = "Apache License, Version 2.0"
+  spec.license       = "Apache-2.0"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
@@ -31,7 +31,7 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_runtime_dependency     "fluentd"
+  spec.add_runtime_dependency     "fluentd", ">=0.14.0", "< 2"
   spec.add_development_dependency "bundler", "~> 1.16"
   spec.add_development_dependency "rake", "~> 10.0"
 end
