@@ -1,11 +1,10 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "fluent/plugin/asresolver/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "fluent-plugin-asresolver"
-  spec.version       = Fluent::Plugin::Asresolver::VERSION
+  spec.version       = "0.1.0"
   spec.authors       = ["Shintaro Kojima"]
   spec.email         = ["goodies@codeout.net"]
 
