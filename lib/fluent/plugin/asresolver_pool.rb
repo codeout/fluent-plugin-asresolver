@@ -44,14 +44,18 @@ module Fluent
       end
 
       def resolve(record)
-        if (as = origin_as(record['src_ip'] || record['ipv4_src_addr'])) &&
-            (record['src_as'].nil? || record['src_as'] == 0)
-          record['src_as'] = as
-        end
+        begin
+          if (as = origin_as(record['src_ip'] || record['ipv4_src_addr'])) &&
+              (record['src_as'].nil? || record['src_as'] == 0)
+            record['src_as'] = as
+          end
 
-        if (as = origin_as(record['dst_ip'] || record['ipv4_dst_addr'])) &&
-            (record['dst_as'].nil? || record['dst_as'] == 0)
-          record['dst_as'] = as
+          if (as = origin_as(record['dst_ip'] || record['ipv4_dst_addr'])) &&
+              (record['dst_as'].nil? || record['dst_as'] == 0)
+            record['dst_as'] = as
+          end
+        rescue
+          # NOTE: Skip without logging due to huge number of records
         end
 
         record
