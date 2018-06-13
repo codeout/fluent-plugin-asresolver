@@ -32,6 +32,8 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_runtime_dependency     "fluentd", ">=0.14.0", "< 2"
+  spec.add_runtime_dependency     "grpc", ">=1.12.0"
+  spec.add_runtime_dependency     "protobuf", ">=3.8.0"
   spec.add_development_dependency "bundler", "~> 1.16"
   spec.add_development_dependency "rake", "~> 10.0"
 end
