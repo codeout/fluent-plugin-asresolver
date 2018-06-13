@@ -80,6 +80,8 @@ module Fluent
           path_attrs = d.paths.find {|p| p.best}.pattrs.map {|i| i.unpack('C*')}
           as_path = path_attrs.find {|a| a[1] == 2}
 
+          return nil unless as_path
+
           # NOTE: decode AS_PATH attribute
           case as_path[0]
           when 64 # 2 byte AS
