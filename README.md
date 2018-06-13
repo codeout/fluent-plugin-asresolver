@@ -22,6 +22,21 @@ client $ gobgp -u <fluentd-server> neighbor
 IPv4 only. We're sorry about that.
 
 
+## :warning: Supported gobgpd version :warning:
+
+Use v1.32 and DO NOT USE newer version. It'll cause fluentd crash.
+
+```
+commit a6e0d00a705146e6b7f72a4d58c61b063980cc65
+Author: FUJITA Tomonori <fujita.tomonori@lab.ntt.co.jp>
+Date:   Fri Jun 1 20:32:28 2018 +0900
+
+    GoBGP 1.32
+
+    Signed-off-by: FUJITA Tomonori <fujita.tomonori@lab.ntt.co.jp>
+```
+
+
 ## Copyright and License
 
 Copyright (c) 2018 Shintaro Kojima. Code released under the [Apache License, Version 2.0](LICENSE).
