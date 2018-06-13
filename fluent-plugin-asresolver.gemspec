@@ -9,9 +9,10 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Shintaro Kojima"]
   spec.email         = ["goodies@codeout.net"]
 
-  spec.summary       = %q{TODO: Write a short summary, because RubyGems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = "Fluentd filter plugin to resolve origin AS of src / dst IP addresses."
+  spec.description   = "Fluentd filter plugin to resolve origin AS of src / dst IP addresses with gobgpd lookup."
+  spec.homepage      = "https://github.com/codeout/fluent-plugin-asresolver"
+  spec.license       = "Apache License, Version 2.0"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
