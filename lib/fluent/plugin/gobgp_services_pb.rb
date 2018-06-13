@@ -24,7 +24,7 @@
 #
 
 require 'grpc'
-require 'gobgp_pb'
+require_relative 'gobgp_pb'
 
 module Gobgpapi
   module GobgpApi
